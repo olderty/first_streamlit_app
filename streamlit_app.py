@@ -52,13 +52,8 @@ streamlit.dataframe(my_data_rows)
 add_my_fruit = streamlit.text_input('What would you like to add?', 'jackfruit')
 streamlit.write('Thanks for adding ', add_my_fruit)
 
-
-
-
-
-# fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Avocado','Strawberries'])
-# fruits_to_show = my_fruit_list.loc[fruits_selected]
-
+# insert into Snowflake
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
 
 
